@@ -20,3 +20,7 @@ app.use(express.urlencoded({
 
 app.use(express.static("public"));
 app.use(cookieParser());
+
+import userRouter from "./routers/user.router.js";
+
+app.use("/api/task-manager/v1/users", userRouter);
